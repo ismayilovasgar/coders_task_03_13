@@ -1,0 +1,36 @@
+@media screen and (max-width: 768px) {
+  :root {
+    --width_row: 100%;
+    --width_image_car: 200px;
+    --height_car_from_rel: 30px;
+    --width_step: calc((var(--width_row) - var(--width_image_car)) / 4);
+    --product-col-count: 2;
+    --product-gap: 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  :root {
+    --width_row: 100%;
+    --width_image_car: 200px;
+    --height_car_from_rel: 30px;
+    --width_step: calc((var(--width_row) - var(--width_image_car)) / 4);
+
+    --product-col-count: 1;
+    --product-gap: 15px;
+  }
+
+  .products__about {
+    font-size: 15px;
+  }
+
+  .row {
+    height: 30vh;
+    position: relative;
+    margin: 20px auto;
+    width: var(--width_row);
+  }
+  .card-txt h3 {
+    font-size: 15px;
+  }
+}
