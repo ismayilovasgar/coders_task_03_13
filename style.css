@@ -111,6 +111,7 @@
 }
 
 .wrapper i {
+  transition: 0.5s;
   font-size: 18px;
   color: #a0a0a0;
 }
