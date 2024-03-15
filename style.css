@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  /* car size */
+  --width_row: 100%;
+  --width_image_car: 800px;
+  --height_car_from_rel: 30px;
+  --width_step: calc((var(--width_row) - var(--width_image_car)) / 4);
+
+  /* slider size */
+  --product-gap: 30px;
+  --product-row-count: 3;
+}
+
+.header {
+  background: url("./images/h1_hero1.png.webp") center / cover no-repeat;
+  margin: 200px auto 0;
+  height: 80vh;
+}
+
+.container {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+.row {
+  height: 70vh;
+  position: relative;
+  margin: 20px auto;
+  width: var(--width_row);
+  /* border: 2px solid rgb(139, 17, 150); */
+}
+
+.row img {
+  width: var(--width_image_car);
+  position: absolute;
+  left: var(--width_step);
+  left: 200px;
+  bottom: 30px;
+  animation: car_move 3.4s ease-in-out 0.5s infinite alternate;
+  /* border: 2px solid rgb(25, 173, 5); */
+}
+
+@keyframes car_move {
+  from {
+    bottom: var(--height_car_from_rel);
+    left: var(--width_step);
+  }
+  to {
+    bottom: var(--height_car_from_rel);
+    left: calc(var(--width_step) * 3);
+  }
+}
+
+/* Section-Middle */
+.section-middle {
+  padding: 120px 0 100px 0;
+}
+.section-content {
+  margin: 0 15px;
+}
+
+.section-content p {
+  color: rgb(126, 160, 255);
+  font-family: "Roboto", sans-serif;
+  line-height: 24px;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  word-spacing: 0px;
+  text-decoration: none solid rgb(126, 160, 255);
+  text-align: center;
+}
+
+.section-content h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  color: #00095e;
+  line-height: 57.4px;
+  margin: 0 0 22px;
+}
+
+.image-card-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--product-gap);
+  margin: 60px 0 0 0;
+}
+
+.image-card {
+  width: calc((100% / var(--product-row-count)) - var(--product-gap));
+  box-shadow: rgba(0, 9, 94, 0.06) 0px 10px 15px 0px;
+}
+
+.image-card img {
+  width: 100%;
+}
+
+.card-body {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-body .card-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-txt p {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: rgb(126, 160, 255);
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+}
+.card-body .card-txt h3 a {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  color: rgb(0, 9, 94);
+  line-height: 26.4px;
+  font-family: 700;
+}
+
+.card-body > p {
+  margin: 10px 0 0 0;
+  color: #00095e;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-body p a {
+  font-size: 12px;
+  padding: 5px 0 5px 0;
+  margin: 0 20px 0 0;
+  font-weight: 500;
+  color: rgb(126, 160, 255);
+  background-color: rgba(126, 160, 255, 0.05);
+  border-radius: 19px;
+  color: rgb(126, 160, 255);
+  font-family: "Roboto", sans-serif;
+}
+
+/*
+.section-slider-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--product-gap);
+}
+
+.section-slider-card {
+  box-shadow: rgba(0, 9, 94, 0.06) 0px 10px 15px 0px;
+  width: calc(100% / var(--product-row-count) - var(--product-gap));
+  padding: 0px 20px;
+}
+
+.country-cost {
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-cost h3 a {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  color: rgb(0, 9, 94);
+  line-height: 26.4px;
+  font-family: 700;
+  margin: 0 0 10px 0;
+}
+.country-cost span {
+  color: rgb(126, 160, 255);
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-slider-card p a {
+  font-size: 14px;
+  padding: 9px 15px 9px 0;
+  font-weight: 500;
+  margin: 0 0 13px 0;
+  color: rgb(126, 160, 255);
+  background-color: rgba(126, 160, 255, 0.05);
+  border-radius: 19px;
+}
+.section-slider-card p {
+  font-size: 14px;
+} */
