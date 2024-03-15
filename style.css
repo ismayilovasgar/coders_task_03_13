@@ -9,7 +9,20 @@
   list-style: none;
   font-family: "Roboto", sans-serif;
 }
+/* root */
+:root {
+  /* car size */
+  --width_row: 100%;
+  --width_image_car: 800px;
+  --height_car_from_rel: 30px;
+  --width_step: calc((var(--width_row) - var(--width_image_car)) / 4);
 
+  /* slider size */
+  --product-gap: 40px;
+  --product-col-count: 3;
+}
+
+/* Header */
 .header {
   height: 80vh;
   background: url("./images/h1_hero1.png.webp") center / cover no-repeat;
@@ -27,7 +40,6 @@
   position: relative;
   margin: 20px auto;
   width: var(--width_row);
-  /* border: 2px solid rgb(139, 17, 150); */
 }
 
 .row img {
@@ -37,7 +49,6 @@
   left: 200px;
   bottom: 30px;
   animation: car_move 3.4s ease-in-out 0.5s infinite alternate;
-  /* border: 2px solid rgb(25, 173, 5); */
 }
 
 @keyframes car_move {
@@ -53,18 +64,9 @@
 
 /* Section-Middle */
 
-:root {
-  /* car size */
-  --width_row: 100%;
-  --width_image_car: 800px;
-  --height_car_from_rel: 30px;
-  --width_step: calc((var(--width_row) - var(--width_image_car)) / 4);
-
-  /* slider size */
-  --product-gap: 40px;
-  --product-col-count: 3;
+.section-middle {
+  margin: 20px 0 80px 0;
 }
-
 .section-content {
   display: flex;
   justify-content: center;
@@ -100,7 +102,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: var(--product-gap);
-  /* position: relative; */
 }
 
 .wrapper {
@@ -108,10 +109,12 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .wrapper i {
   font-size: 18px;
   color: #a0a0a0;
 }
+
 .wrapper i:hover {
   left: -5px;
   color: #00095e;
@@ -121,12 +124,12 @@
 .image-card {
   width: calc((100% / var(--product-col-count)) - var(--product-gap));
   box-shadow: rgba(0, 9, 94, 0.06) 0px 10px 15px 0px;
-  /* border: 2px solid red; */
 }
 
 .image-card .parent {
   overflow: hidden;
 }
+
 .image-card .parent:hover {
   filter: drop-shadow(7px -1px 3px #99bde9d2);
 }
